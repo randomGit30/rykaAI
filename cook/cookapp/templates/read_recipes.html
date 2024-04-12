@@ -1,0 +1,29 @@
+{}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/read_recipes.css' %}">
+<div class="container">
+    <h2>Recipes</h2>
+    <div class="row">
+        {% for recipe in recipes %}
+        <div class="col-md-4">
+            <div class="card" style="width: 18rem;">
+                {% if recipe.image %}
+                <img src="{{ recipe.image.url }}" class="card-img-top" alt="{{ recipe.name }}">
+                {% endif %}
+                <div class="card-body">
+                    <h5 class="card-title">{{ recipe.name }}</h5>
+                    <p class="card-text">Prep Time: {{ recipe.prep_time }}</p>
+                    <p class="card-text">Cuisine: {{ recipe.cuisine.name }}</p>
+                    <p class="card-text">Ingredients: {{ recipe.ingredients }}</p>
+                    <p class="card-text">Instructions: {{ recipe.method }}</p>
+                    <p class="card-text">Video: {{ recipe.video_link }}</p>
+
+                    <a href="#" class="btn btn-primary">Read More</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

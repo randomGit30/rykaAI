@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CookApp Landing Page</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+</head>
+<body>
+        <nav class="nav">
+          <i class="uil uil-bars navOpenBtn"></i>
+          <a href="#" class="logo">Shik Shak Cook</a>
+    
+          <ul class="nav-links">
+            <i class="uil uil-times navCloseBtn"></i>
+            <li><a href="#">Home</a></li>
+            <li><a href="{% url 'read_recipes'%}">Read</a></li>
+            <li><a href="{% url 'publish_recipe' %}">Publish</a></li>
+            <li><a href="#">Cures</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+    
+          <i class="uil uil-search search-icon" id="searchIcon"></i>
+          <div class="search-box">
+            <i class="uil uil-search search-icon"></i>
+            <input type="text" placeholder="Search here..." />
+          </div>
+        </nav>
+	<script src = "{% static 'js/landing.js' %}"></script>
+</body>
+</html>

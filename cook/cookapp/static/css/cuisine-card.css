@@ -1,0 +1,97 @@
+.gallery{
+    width:900px;
+    display:flex;
+    overflow-x: scroll;
+}
+.gallery div{
+    width:100%;
+    display:grid;
+    grid-template-columns: auto auto auto;
+    grid-gap:20px;
+    padding:10px;
+    flex:none;
+}
+.gallery::-webkit-scrollbar{
+    display:none;
+}
+.gallery-wrap{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin:10% auto;
+}
+#backBtn,#nextBtn{
+    width:50px;
+    cursor:pointer;
+    margin:40px;
+}
+.gallery div .card{
+    width:100%;
+    filter:grayscale(100%);
+    transition:transform 0.5s;
+}
+.gallery div .card:hover{
+    filter: grayscale(0);
+    cursor:pointer;
+    transform:scale(1.1);
+}
+
+.container{
+    font-family: "Cairo",sans-serif;
+    width:80%;
+    font-size:1.6rem;
+    margin:2rem auto;
+}
+.card{
+    background-color: #fff;
+    box-shadow:0 0 2.5rem rgba(0,0,0,0.28);
+}
+.card-image{
+    overflow:hidden;
+}
+.card-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+.card-content{
+    padding:2rem;
+}
+.cuisine-details{
+    display:flex;
+    align-items:center;
+}
+.cuisine-cta{
+    margin-top:2rem;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.button{
+    padding:1.6rem 4rem;
+    display:inline-block;
+    background-color:#ffb950;
+    border-radius: 0.6rem;
+    color:white;
+    border:none;
+    text-decoration: none;
+}
+@media screen and (max-width: 768px)
+{
+    .card{
+        display:flex;
+        height:5 rem;
+        overflow:hidden;
+    }
+    .card-image{
+        height:auto;
+        flex:1;
+    }
+    .card-content{
+        flex:2;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}

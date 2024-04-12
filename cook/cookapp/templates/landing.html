@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="{% static 'css/landing.css' %}" />
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+   <script src="Landingpage.js" defer></script>
+   <link rel="stylesheet" href="{% static 'css/cuisine-card.css'%}">
+   <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+      />
+    <style>
+    .swiper {
+      width: 440px;
+      height: 620px;
+      margin: 90px auto;
+    }
+
+    .swiper-slide {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 18px;
+      font-size: 22px;
+      font-weight: bold;
+      color: #fff;
+    }
+
+    .swiper-slide:nth-child(1n) {
+      background-color: rgb(206, 17, 17);
+    }
+
+    .swiper-slide:nth-child(2n) {
+      background-color: rgb(0, 140, 255);
+    }
+
+    .swiper-slide:nth-child(3n) {
+      background-color: rgb(10, 184, 111);
+    }
+
+    .swiper-slide:nth-child(4n) {
+      background-color: rgb(211, 122, 7);
+    }
+    .mySwiper{
+      margin-top:5%;
+    }
+    </style>
+  </head>
+  <body>
+    
+    <nav class="nav">
+      <i class="uil uil-bars navOpenBtn"></i>
+      <a href="#" class="logo">Shik Shak Cook</a>
+
+      <ul class="nav-links">
+        <i class="uil uil-times navCloseBtn"></i>
+        <li><a href="#">Home</a></li>
+        <li><a href="{% url 'publish_recipe' %}">Publish</a></li>
+        <li><a href="{% url 'read_recipes' %}">Read</a></li>
+        <li><a href="{% url 'cure_recipes' %}">Cure.ai</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+
+      <i class="uil uil-search search-icon" id="searchIcon"></i>
+      <div class="search-box">
+        <i class="uil uil-search search-icon"></i>
+        <input type="text" placeholder="Search here..." />
+      </div>
+    </nav>
+  <div class="makethefuckinggap"></div>
+
+
+    <div class="gallery-wrap">
+      <span><img src="{% static 'images/back.png'%}" id="backBtn"></span>
+      <div class="gallery">
+        <div class="container china-cuisine">
+          <div class="card">
+            <div class="card-image">
+              <img src="{% static 'images/chinese.jpeg'%}" alt="">
+            </div>
+            <div class="card-content">
+              <h2 class="cuisine-title">Italian Cuisine</h2>
+              <!-- <p class="cuisine-excerpt">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p> -->
+              <div class="cuisine-cta">
+                <button class="button">Let's GO</button>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="container italian-cuisine">
+          <div class="card">
+            <div class="card-image">
+              <img src="{% static 'images/japanese.jpeg'%}" alt="">
+            </div>
+            <div class="card-content">
+              <h2 class="cuisine-title">Japanese Cuisine</h2>
+              <!-- <p class="cuisine-excerpt">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p> -->
+              <div class="cuisine-cta">
+                <button class="button">Let's GO</button>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="container punjabi-cuisine">
+          <div class="card">
+            <div class="card-image">
+              <img src="{% static 'images/punjabi.jpeg'%}" alt="">
+            </div>
+            <div class="card-content">
+              <h2 class="cuisine-title">Punjabi Cuisine</h2>
+              <!-- <p class="cuisine-excerpt">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p> -->
+              <div class="cuisine-cta">
+                <button class="button">Let's GO</button>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="container japanese-cuisine">
+          <div class="card">
+            <div class="card-image">
+              <img src="{% static 'images/chinese.jpeg'%}" alt="">
+            </div>
+            <div class="card-content">
+              <h2 class="cuisine-title">Chinese Cuisine</h2>
+              <!-- <p class="cuisine-excerpt">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p> -->
+              <div class="cuisine-cta">
+                <button class="button">Let's GO</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <span><img src="{% static 'images/next.png' %}" id="nextBtn"></span>
+    </div>
+    
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide card">
+          <img src="https://cdn.pixabay.com/photo/2020/10/27/09/44/macarons-5690175_1280.jpg" alt="italian@cuisine">
+          <div class="img-overlay">
+            <h4>Sweet</h4>
+            <span>Where Every Bite is a Sweet Escape</span>
+            <button type="submit" class="submit-btn">Check Out</button>
+          </div>
+        </div>
+        <div class="swiper-slide card">
+          <img src="https://cdn.pixabay.com/photo/2022/01/20/19/11/fruit-6953176_1280.jpg" alt="italian@cuisine">
+          <div class="img-overlay">
+            <h4>Spicy</h4>
+            <span>Feel the Heat, Savor the Spice</span>
+            <button type="submit" class="submit-btn">Check Out</button>
+          </div>
+        </div>
+        <div class="swiper-slide card">
+          <img src="https://cdn.pixabay.com/photo/2016/11/22/18/59/cold-1850040_1280.jpg" alt="italian@cuisine">
+          <div class="img-overlay">
+            <h4>Sour</h4>
+            <span>Sour, the Flavor That Dances on Your Tongue</span>
+            <button type="submit" class="submit-btn">Check Out</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        effect: "cards",
+        grabCursor: true,
+      });
+    </script>
+
+
+    <script>
+      let scrollContainer=document.querySelector(".gallery");
+      let backBtn=document.getElementById("backBtn");
+      let nextBtn=document.getElementById("nextBtn");
+      scrollContainer.addEventListener("wheel",(evt)=>{
+        evt.preventDefault();
+        scrollContainer.scrollLeft+=evt.deltaY;
+        scrollContainer.scroll.scrollBehaviour="auto";
+      });
+      nextBtn.addEventListener("click",()=>{
+      scrollContainer.scroll.scrollBehaviour="smooth";
+      scrollContainer.scrollLeft+=900;
+      });
+      backBtn.addEventListener("click",()=>{
+      scrollContainer.scroll.scrollBehaviour="smooth";
+        scrollContainer.scrollLeft-=900;
+      });
+    </script>
+    
+    
+  </body>
+</html>

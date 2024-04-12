@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/cures.css' %}">
+    <link rel="icon" type="img/png" href="{% static 'images/flash.png' %}">
+    <title>RYKA CURES - Powered by Gemini</title>
+</head>
+<body>
+    <div class="container">
+        <div class="inputSide">
+            <form method="post" enctype="multipart/form-data" id="form2">
+                {% csrf_token %}
+                <h2>Supercharge ⚡️</h2>
+                <div class="inputGroup">
+                    <input type="text" name="email" placeholder="Email" class="query">
+                    <button type="submit" id="submit">SUBMIT</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="emailSide">
+            <form method="post" autocomplete="off" id="form2">
+                {% csrf_token %}
+                <h1>CURES.AI</h1>
+                <div class="inputGroup">
+                    <input type="number" name="age" placeholder="Age" class="query">
+                    <input type="number" name="weight" placeholder="Weight(KGS)" class="query">
+                    <input type="text" name="stress" placeholder="Stress level(1-5):" class="query">
+                    <input type="text" name="mood" placeholder="Any specific mood?" class="query">
+                    <input type="text" name="pressure" placeholder="Pressure?" class="query">
+                </div>
+
+            </form>
+        </div>
+        <div class="overlay">
+            <div class="overlay-left">
+                <h1>Thank you for providing your details.</h1>
+                <p>Your personalized mental well-being plan is now being prepared. You will receive it shortly in your email. Here's to a healthier, happier you!</p>
+                <button id="signin">Go back</button>
+            </div>
+            <div class="overlay-right">
+                <h1>One Step More!</h1>
+                <p>Enter your E-Mail to get your personalized diet plan.</p>
+                <button id="signup">Next</button>
+            </div>
+        </div>
+    </div>
+    <script src="{% static 'js/cure.js' %}"></script>
+</body>
+</html>
